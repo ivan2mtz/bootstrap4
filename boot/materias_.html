@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Materias</title>
+
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Sistema</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Ayuda</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cerrar sesión</a>
+            </li>
+            </ul>
+        </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Menu -->
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-header">
+                            Menu
+                        </div>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="alumnos.html">Alumnos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="materias.html">Materias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="carreras.html">Carreras</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Fin Menu -->
+                <!-- Contenido -->
+                <div class="col-8">
+                    
+                    <!-- Card -->
+                <div class="card">
+                        <div class="card-header">
+                            Materias
+                            <a href="agregar_alumno.html" class="btn btn-primary float-sm-right float-right"><i class="fa fa-plus"></i> Agregar</a>
+                        </div>
+                        
+                            <!-- Tabla -->
+                        <table class="table table-bordered table-hover table-sm">
+                            <thead>
+                                <tr class="d-flex">
+                                    <th class="col-sm-2">Acción</th>
+                                    <th class="col-sm-2">Clave</th>
+                                    <th class="col-sm-4">Nombre</th>
+                                    <th class="col-sm-1">Cred.</th>
+                                    <th class="col-sm-3">Semestre</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr  class="d-flex">
+                                    <td  class="col-sm-2">
+                                        <a href="editar_alumno.html" class="btn btn-sm btn-outline-success"><i class="fa fa-edit"></i></a>
+                                        <a href="eliminar_alumno.html" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                    <td  class="col-sm-2">ISC-01</td>
+                                    <td  class="col-sm-4">Servidores</td>
+                                    <td  class="col-sm-1 text-right">5</td>
+                                    <td  class="col-sm-3 text-right">8</td>
+                                </tr>
+                                <tr  class="d-flex">
+                                    <td  class="col-sm-2">
+                                        <button type="button" class="btn btn-sm btn-outline-success"><i class="fa fa-edit"></i></button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i></button>
+                                    </td>
+                                    <td  class="col-sm-2">ISC-02</td>
+                                    <td  class="col-sm-4">IA</td>
+                                    <td  class="col-sm-1 text-right">5</td>
+                                    <td  class="col-sm-3 text-right">8</td>
+                                </tr>
+                                <tr  class="d-flex">
+                                    <td  class="col-sm-2">
+                                        <button type="button" class="btn btn-sm btn-outline-success"><i class="fa fa-edit"></i></button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i></button>
+                                    </td>
+                                    <td  class="col-sm-2">ISC-03</td>
+                                    <td  class="col-sm-4">Programacion Web</td>
+                                    <td  class="col-sm-1 text-right">5</td>
+                                    <td  class="col-sm-3 text-right">7</td>
+                                </tr>
+                                <tr  class="d-flex">
+                                    <td  class="col-sm-2">
+                                        <button type="button" class="btn btn-sm btn-outline-success"><i class="fa fa-edit"></i></button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i></button>
+                                    </td>
+                                    <td  class="col-sm-2">ISC-04</td>
+                                    <td  class="col-sm-4">Programacion en Capas</td>
+                                    <td  class="col-sm-1 text-right">5</td>
+                                    <td  class="col-sm-3 text-right">8</td>
+                                </tr>
+                                <tr  class="d-flex">
+                                    <td  class="col-sm-2">
+                                        <button type="button" class="btn btn-sm btn-outline-success"><i class="fa fa-edit"></i></button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i></button>
+                                    </td>
+                                    <td  class="col-sm-2">ISC-05</td>
+                                    <td  class="col-sm-4">Administracion de redes</td>
+                                    <td  class="col-sm-1 text-right">5</td>
+                                    <td  class="col-sm-3 text-right">8</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                        <!-- Fin tabla -->
+    
+                    </div>
+                    <!-- Fin card -->
+
+                </div>
+                <!-- Fin de Contenido -->
+            </div>
+        </div>
+
+        <footer>
+            <div class="fixed-bottom bg-light">
+                <p class="text-center font-weight-bold text-white">Congreso 2018</p>
+            </div>
+        </footer>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- aqui va nuestro codigo js -->
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Texto que cambia de color</p>
+    <button onclick="cambiarColor()">Color</button>
+
+    <div id="contenido"></div>
+    <button onclick="agregarContenido()">Contenido</button>
+
+    <input type="text" name="nombre" id="nombre">
+    <button onclick="getValor()">Get</button>
+    <button onclick="setValor()">Set</button>
+
+
+    <script>
+        var pintado = false;
+
+        function cambiarColor() {
+            if (!pintado) {
+                var x = document.getElementById("demo");
+                x.style.color = "red";
+                x.style.background = "black";
+                pintado = true;
+            } else {
+                var x = document.getElementById("demo");
+                x.style.color = "black";
+                x.style.background = "white";
+                pintado = false;
+            }
+        }
+
+        function agregarContenido() {
+            document.getElementById("contenido").innerHTML =
+             "<h1>Contenido agregado con JS</h1>";
+        }
+
+        function getValor() {
+            alert(document.getElementById("nombre").value);
+        }
+
+        function setValor() {
+            document.getElementById("nombre").value = 'Instituto Tecnologico';
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Editar alumno</title>
+
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Sistema</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Ayuda</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cerrar sesión</a>
+            </li>
+            </ul>
+        </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Menu -->
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-header">
+                            Menu
+                        </div>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="alumnos.html">Alumnos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="materias.html">Materias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="carreras.html">Carreras</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Fin Menu -->
+                <!-- Contenido -->
+                <div class="col-8">
+                    
+                    <!-- Form -->
+                    <form action="">
+                        <div class="form-group">
+                            <label for="no-control">No. Control</label>
+                            <input type="text" 
+                                class="form-control"
+                                id="no-control" 
+                                aria-describedby="nocontrolHelp" 
+                                placeholder="No. Control" 
+                                maxlength="8"
+                                autocomplete="off"
+                                required
+                                value="06090121"
+                                readonly
+                                >
+                            <small id="nocontrolHelp" class="form-text text-muted">No. Control</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre">Nombre(s)</label>
+                            <input type="text" 
+                             class="form-control"
+                             id="nombre" 
+                             aria-describedby="nombreHelp" 
+                             placeholder="Nombre(s)" 
+                             maxlength="100"
+                             autocomplete="off"
+                             required
+                             value="Ivan"
+                             autofocus
+                             >
+                            <small id="nombreHelp" class="form-text text-muted">Nombre del alumno.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidopaterno">Apellido paterno</label>
+                            <input type="text" 
+                                class="form-control"
+                                id="apellidopaterno" 
+                                aria-describedby="apellidopaternoHelp" 
+                                placeholder="Apellido paterno" 
+                                maxlength="100"
+                                autocomplete="off"
+                                required
+                                value="Martinez"
+                                >
+                            <small id="apellidopaternoHelp" class="form-text text-muted">Apellido paterno.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidomaterno">Apellido materno</label>
+                            <input type="text" 
+                                class="form-control"
+                                id="apellidomaterno" 
+                                aria-describedby="apellidomaternoHelp" 
+                                placeholder="Apellido materno" 
+                                maxlength="100"
+                                autocomplete="off"
+                                required
+                                value="Martinez"
+                                >
+                            <small id="apellidomaternoHelp" class="form-text text-muted">Apellido materno.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha">Fecha de nacimiento</label>
+                            <input type="date" 
+                                class="form-control"
+                                id="fecha" 
+                                aria-describedby="fechaHelp" 
+                                autocomplete="off"
+                                required
+                                value="1988-04-21"
+                                >
+                            <small id="fechaHelp" class="form-text text-muted">Fecha de nacimiento.</small>
+                        </div> 
+                        <div class="form-group">
+                            <label for="sexo">Sexo</label>
+                            <select class="form-control" id="sexo" name="sexo">
+                                <option value="M" selected>Masculino</option>
+                                <option value="F">Femenino</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="observaciones">Observaciones</label>
+                            <textarea class="form-control" id="observaciones" rows="2">egresado</textarea>
+                        </div>
+                        <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input"
+                                      type="radio"
+                                      name="exampleRadios" 
+                                      id="exampleRadios1" 
+                                      value="option1" 
+                                      >
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Soltero
+                                    </label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" 
+                                      type="radio" 
+                                      name="exampleRadios" 
+                                      id="exampleRadios2" 
+                                      value="option2"
+                                      checked
+                                      >
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Casado
+                                    </label>
+                                </div>
+                        </div>
+                        <button type="submit" class="btn btn-success">Actualizar</button>
+                    </form>
+                    <!-- Fin form -->
+
+                </div>
+                <!-- Fin de Contenido -->
+            </div>
+        </div>
+
+        <footer>
+            <div >
+                <p class="text-center font-weight-bold text-white bg-dark">Congreso 2018</p>
+            </div>
+        </footer>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- aqui va nuestro codigo js -->
+  </body>
+</html>

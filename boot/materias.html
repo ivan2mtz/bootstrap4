@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="tema/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <title>Materias</title>
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Sistema</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Ayuda</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cerrar sesión</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- fin navbar -->
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                
+                <!-- menu -->
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="alumnos.html">Alumnos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="materias.html">Materias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carreras.html">Carreras</a>
+                    </li>
+                </ul>
+                <!-- fin menu -->
+
+            </div>
+            <div class="col-8">
+                
+                <div class="card">
+                    <div class="card-header">
+                        Materias
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#agregarMateriaModal">
+                        Agregar
+                        </button>
+                    </div>
+                    <div id="mensaje"></div>
+                    <table class="table table-sm table-hover table-bordered">
+                        <tr>
+                            <th class="text-center">Acción</th>
+                            <th class="text-center">Clave</th>
+                            <th class="text-center">Nombre</th>
+                            <th class="text-center">Creditos</th>
+                            <th class="text-center">Semestre</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" 
+                                class="btn btn-outline-success" 
+                                data-toggle="modal" 
+                                data-target="#editarMateriaModal">
+                                    <i class="fa fa-edit"></i>
+                                </button>
+                                <button type="button" 
+                                class="btn btn-outline-danger"
+                                data-toggle="modal" 
+                                data-target="#eliminarMateriaModal">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                            <td>ISC-01</td>
+                            <td>Servidores</td>
+                            <td class="text-right">5</td>
+                            <td>Septimo</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="" class="btn btn-outline-success"><i class="fa fa-edit"></i></a>
+                                <a href="" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                            </td>
+                            <td>ISC-02</td>
+                            <td>IA</td>
+                            <td class="text-right">5</td>
+                            <td>Septimo</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="" class="btn btn-outline-success"><i class="fa fa-edit"></i></a>
+                                <a href="" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                            </td>
+                            <td>ISC-03</td>
+                            <td>Programación Web</td>
+                            <td class="text-right">5</td>
+                            <td>Septimo</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="" class="btn btn-outline-success"><i class="fa fa-edit"></i></a>
+                                <a href="" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                            </td>
+                            <td>ISC-04</td>
+                            <td>Programación en capas</td>
+                            <td class="text-right">5</td>
+                            <td>Septimo</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="" class="btn btn-outline-success"><i class="fa fa-edit"></i></a>
+                                <a href="" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                            </td>
+                            <td>ISC-05</td>
+                            <td>Administración de DB</td>
+                            <td class="text-right">5</td>
+                            <td>Septimo</td>
+                        </tr>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modal agregar-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="agregarMateriaModal" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Agregar Materia</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <div class="form-group">
+                        <label for="clave">Clave</label>
+                        <input type="text"
+                         class="form-control"
+                         id="clave" 
+                         placeholder="Clave"
+                         name="clave"
+                         maxlength="8"
+                         >
+                    </div>
+                    <div class="form-group">
+                        <label for="materia">Materia</label>
+                        <input type="text"
+                            class="form-control"
+                            id="materia" 
+                            placeholder="Materia"
+                            name="materia"
+                            maxlength="50"
+                            >
+                    </div>
+                    <div class="form-group">
+                        <label for="creditos">Creditos</label>
+                        <input type="number"
+                            class="form-control"
+                            id="creditos" 
+                            placeholder="Creditos"
+                            name="creditos"
+                            min="1"
+                            max="10"
+                            step="1"
+                            >
+                    </div>
+                    <div class="form-group">
+                        <label for="semestre">Semestre</label>
+                        <select class="form-control" id="semestre" name="semestre">
+                            <option value="1">Primero</option>
+                            <option value="2">Segundo</option>
+                            <option value="3">Tercero</option>
+                            <option value="4">Cuarto</option>
+                            <option value="5">Quinto</option>
+                            <option value="6">Sexto</option>
+                            <option value="7">Septimo</option>
+                            <option value="8">Octavo</option>
+                            <option value="9">Noveno</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin modal -->
+
+    <!-- modal editar -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="editarMateriaModal" >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Materia</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <div class="form-group">
+                            <label for="clave">Clave</label>
+                            <input type="text"
+                             class="form-control"
+                             id="clave" 
+                             placeholder="Clave"
+                             name="clave"
+                             maxlength="8"
+                             value="ISC-01"
+                             >
+                        </div>
+                        <div class="form-group">
+                            <label for="materia">Materia</label>
+                            <input type="text"
+                                class="form-control"
+                                id="materia" 
+                                placeholder="Materia"
+                                name="materia"
+                                maxlength="50"
+                                value="Servidores"
+                                >
+                        </div>
+                        <div class="form-group">
+                            <label for="creditos">Creditos</label>
+                            <input type="number"
+                                class="form-control"
+                                id="creditos" 
+                                placeholder="Creditos"
+                                name="creditos"
+                                min="1"
+                                max="10"
+                                step="1"
+                                value="5"
+                                >
+                        </div>
+                        <div class="form-group">
+                            <label for="semestre">Semestre</label>
+                            <select class="form-control" id="semestre" name="semestre">
+                                <option value="1">Primero</option>
+                                <option value="2">Segundo</option>
+                                <option value="3">Tercero</option>
+                                <option value="4">Cuarto</option>
+                                <option value="5">Quinto</option>
+                                <option value="6">Sexto</option>
+                                <option value="7" selected>Septimo</option>
+                                <option value="8">Octavo</option>
+                                <option value="9">Noveno</option>
+                            </select>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- fin modal -->
+
+        <!-- modal eliminar-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="eliminarMateriaModal" >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Eliminar Materia</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <h3>¿Estas seguro de eliminar la materia?</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal" onclick="mostrarMensaje()">Si</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- fin modal -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+        function mostrarMensaje() {
+            document.getElementById("mensaje").innerHTML = '<div class="alert alert-info alert-dismissible fade show" role="alert">' +
+            'Materia eliminada correctamente.'+
+            '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'+
+            '<span aria-hidden="true">&times;</span>'+
+            '</button>'+
+            '</div>';
+        }
+    </script>
+
+  </body>
+</html>
